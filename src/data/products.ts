@@ -17,7 +17,7 @@ export const products: Product[] = [
     price: 125000,
     category: 'Necklace',
     material: 'Gold',
-    image: '/src/assets/products/image.png',
+    image: '/products/image.png',
     isBestSeller: true,
     description: 'A handcrafted 22k gold necklace featuring intricate traditional designs.'
   },
@@ -27,7 +27,7 @@ export const products: Product[] = [
     price: 450000,
     category: 'Ring',
     material: 'Diamond',
-    image: '/src/assets/products/image copy.png',
+    image: '/products/image copy.png',
     isBestSeller: true,
     description: 'A stunning solitaire diamond ring set in 18k white gold.'
   },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     price: 15600,
     category: 'Bracelet',
     material: 'Silver',
-    image: '/src/assets/products/image copy 2.png',
+    image: '/products/image copy 2.png',
     isBestSeller: false,
     description: 'Elegant sterling silver bangles with a polished finish.'
   },
@@ -47,7 +47,7 @@ export const products: Product[] = [
     price: 85000,
     category: 'Earring',
     material: 'Diamond',
-    image: '/src/assets/products/image copy 3.png',
+    image: '/products/image copy 3.png',
     isBestSeller: true,
     description: 'Exquisite diamond-encrusted floral stud earrings.'
   },
@@ -57,7 +57,7 @@ export const products: Product[] = [
     price: 45000,
     category: 'Ring',
     material: 'Gold',
-    image: '/src/assets/products/image copy 4.png',
+    image: '/products/image copy 4.png',
     isBestSeller: false,
     description: 'Vintage-inspired gold ring with intricate filigree work.'
   },
@@ -67,7 +67,7 @@ export const products: Product[] = [
     price: 890000,
     category: 'Necklace',
     material: 'Gold',
-    image: '/src/assets/products/image copy 5.png',
+    image: '/products/image copy 5.png',
     isBestSeller: true,
     description: 'The ultimate bridal choker set featuring uncut diamonds and gold.'
   },
@@ -77,7 +77,7 @@ export const products: Product[] = [
     price: 28000,
     category: 'Necklace',
     material: 'Silver',
-    image: '/src/assets/products/image copy 6.png',
+    image: '/products/image copy 6.png',
     isBestSeller: false,
     description: 'Deep blue sapphire pendant on a sterling silver chain.'
   },
@@ -87,7 +87,7 @@ export const products: Product[] = [
     price: 32000,
     category: 'Earring',
     material: 'Gold',
-    image: '/src/assets/products/image copy 7.png',
+    image: '/products/image copy 7.png',
     isBestSeller: false,
     description: 'Classic 18k gold hoop earrings for everyday elegance.'
   }

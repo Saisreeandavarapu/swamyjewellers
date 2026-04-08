@@ -10,7 +10,7 @@ const AboutUs: React.FC = () => {
       <section className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="src/assets/banners/image copy 6.png"
+            src="/banners/image copy 6.png"
             className="w-full h-full object-cover"
             alt="Jewellery Crafting"
           />
@@ -103,7 +103,7 @@ const AboutUs: React.FC = () => {
             >
               <div className="aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
                 <img
-                  src="src/assets/products/image copy 3.png"
+                  src="/products/image copy 3.png"
                   className="w-full h-full object-cover"
                   alt="Jeweller at work"
                 />

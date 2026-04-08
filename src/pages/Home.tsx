@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       title: "Timeless Elegance",
       subtitle: "EXQUISITE DIAMOND COLLECTIONS",
       description: "Discover the brilliance of handcrafted diamond masterpieces designed for your most precious moments.",
-      image: "/src/assets/banners/image.png",
+      image: '/banners/image.png',
       btnText: "Shop Diamonds",
       btnLink: "/shop?material=Diamond"
     },
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
       title: "Royal Heritage",
       subtitle: "22K TRADITIONAL GOLD",
       description: "Celebrate tradition with our heritage gold collection, inspired by the royal artisanship of ancient India.",
-      image: "/src/assets/banners/image copy.png",
+      image: '/banners/image copy.png',
       btnText: "Explore Gold",
       btnLink: "/shop?material=Gold"
     },
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       title: "Handcrafted Luxury",
       subtitle: "SILVER & PRECIOUS STONES",
       description: "Contemporary silver jewellery designed for the modern woman who values understated luxury.",
-      image: "/src/assets/banners/image copy 2.png",
+      image: '/banners/image copy 2.png',
       btnText: "Explore Silver",
       btnLink: "/shop?material=Silver"
     },
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       title: "The Bridal Edit",
       subtitle: "WEDDING SPECIALS",
       description: "Make your big day unforgettable with our exclusive bridal ensembles that capture the essence of luxury.",
-      image: "/src/assets/banners/image copy 3.png",
+      image: '/banners/image copy 3.png',
       btnText: "View Bridal",
       btnLink: "/shop?category=Necklace"
     },
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       title: "Bespoke Jewelry",
       subtitle: "CUSTOM DESIGNED FOR YOU",
       description: "Work with our master artisans to create a one-of-a-kind piece that reflects your unique story.",
-      image: "/src/assets/banners/image copy 4.png",
+      image: '/banners/image copy 4.png',
       btnText: "Start Designing",
       btnLink: "/contact"
     }
@@ -222,7 +222,7 @@ const Home: React.FC = () => {
             </motion.div>
             <div className="relative">
               <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
-                <img src="/src/assets/banners/image copy 5.png" className="w-full h-full object-cover" alt="Heritage" />
+                <img src="/banners/image copy 5.png" className="w-full h-full object-cover" alt="Heritage" />
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-gold/10 rounded-full blur-2xl" />

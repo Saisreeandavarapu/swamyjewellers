@@ -16,7 +16,7 @@ const Jewellery: React.FC = () => {
       <div className="relative py-24 bg-luxury-black overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="src/assets/banners/image copy 3.png"
+            src="/banners/image copy 3.png"
             className="w-full h-full object-cover"
             alt="Jewellery Pattern"
           />
@@ -159,7 +159,7 @@ const Jewellery: React.FC = () => {
                       ? "https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=800"
                       : activeTab === 'Diamond'
                         ? "https://images.unsplash.com/photo-1598560917505-59a3ad559071?w=800"
-                        : "src/assets/products/image copy 6.png"
+                        : "/products/image copy 6.png"
                   }
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   alt={activeTab}
