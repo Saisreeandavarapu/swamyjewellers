@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-luxury-cream text-luxury-black antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-lg rounded-xl transition-all duration-300;
+  }
+  
+  .gold-glow {
+    @apply shadow-[0_0_15px_rgba(212,175,55,0.3)];
+  }
+  
+  .gold-border {
+    @apply border border-gold/30 hover:border-gold/60 transition-colors duration-300;
+  }
+  
+  .shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transform: skewX(-20deg);
+  }
+  
+  .group:hover .shimmer-effect::after {
+    animation: shimmer 1s infinite;
+  }
+  
+  .btn-gold {
+    @apply bg-gold text-white font-medium py-3 px-8 rounded-full 
+           hover:bg-gold-dark hover:shadow-lg hover:scale-105 transition-all duration-300 
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-luxury-charcoal hover:text-gold transition-colors duration-200 font-medium;
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.gradient-text {
+  @apply bg-gold-gradient bg-clip-text text-transparent;
+}
