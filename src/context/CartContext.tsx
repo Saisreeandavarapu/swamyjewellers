@@ -15,6 +15,7 @@ interface CartContextType {
   cartCount: number;
   wishlist: string[];
   toggleWishlist: (productId: string) => void;
+  getItemQuantity: (productId: string) => number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -71,6 +72,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     );
   };
 
+  const getItemQuantity = (productId: string) => {
+    const item = cart.find(i => i.id === productId);
+    return item ? item.quantity : 0;
+  };
+
   const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
   const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
 
@@ -86,6 +92,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         cartCount,
         wishlist,
         toggleWishlist,
+        getItemQuantity,
       }}
     >
       {children}

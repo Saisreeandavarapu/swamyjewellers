@@ -48,22 +48,26 @@ const Cart: React.FC = () => {
               </div>
 
               {cart.map((item) => (
-                <div key={item.id} className="p-6 border-b border-gray-100 last:border-0 grid grid-cols-1 md:grid-cols-6 gap-6 items-center">
+                <div key={item.id} className="p-6 border-b border-gray-100 last:border-0 grid grid-cols-1 md:grid-cols-6 gap-6 items-center relative group">
                   <div className="col-span-1 md:col-span-3 flex items-center space-x-6">
-                    <img 
-                      src={item.image} 
-                      alt={item.name} 
-                      className="w-24 h-32 object-cover rounded-xl shadow-sm"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800';
-                      }}
-                    />
+                    <Link to={`/product/${item.id}`} className="block shrink-0">
+                      <img 
+                        src={item.image} 
+                        alt={item.name} 
+                        className="w-24 h-32 object-cover rounded-xl shadow-sm hover:opacity-80 transition-opacity"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800';
+                        }}
+                      />
+                    </Link>
                     <div>
-                      <h4 className="font-serif font-bold text-lg text-luxury-black">{item.name}</h4>
+                      <Link to={`/product/${item.id}`}>
+                        <h4 className="font-serif font-bold text-lg text-luxury-black hover:text-gold transition-colors">{item.name}</h4>
+                      </Link>
                       <p className="text-xs uppercase tracking-widest text-gold mt-1">Material: {item.material}</p>
                       <button 
                         onClick={() => removeFromCart(item.id)}
-                        className="text-red-400 hover:text-red-600 flex items-center text-xs font-bold mt-4 md:hidden"
+                        className="text-red-500 hover:text-red-700 flex items-center text-xs font-bold mt-4 md:hidden"
                       >
                         <Trash2 size={14} className="mr-1" /> REMOVE
                       </button>
@@ -75,7 +79,7 @@ const Cart: React.FC = () => {
                   </div>
 
                   <div className="flex justify-center">
-                    <div className="flex items-center border border-gray-200 rounded-full px-2 py-1">
+                    <div className="flex items-center border border-gray-200 rounded-full px-2 py-1 bg-white">
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         className="p-2 hover:text-gold transition-colors"
@@ -99,7 +103,8 @@ const Cart: React.FC = () => {
 
                   <button 
                     onClick={() => removeFromCart(item.id)}
-                    className="hidden md:flex absolute right-12 text-gray-200 hover:text-red-400 p-2 transition-colors"
+                    className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 text-gray-300 hover:text-red-500 p-3 bg-gray-50 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                    title="Remove Item"
                   >
                     <Trash2 size={18} />
                   </button>
